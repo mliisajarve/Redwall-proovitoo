@@ -1,0 +1,614 @@
+:root {
+    --black: rgb(12, 12, 12);
+    --white: rgb(255, 255, 255);
+    --button-red:rgba(238, 29, 76, 1);
+    --hover-red: rgba(190, 14, 54, 1);
+    --linear-black: rgba(0,0,0,0.67);
+    --linear-white: rgba(0,0,0,0);
+    --box-shadow:rgba(36, 30, 27, 0.2);
+    --grey: #F4F4F4;
+    --transparent-white: rgba(255, 255, 255, 0.85);
+    --transparent-black: rgba(12, 12, 12, 0.85);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+   overflow-x: hidden;
+}
+
+/* FIRST PAGE */
+
+.top-dark {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, var(--linear-black) 0%, var(--linear-white) 100%)
+}
+
+.bottom-dark {
+    position: absolute;
+    width: 100%;
+    height: 454px;
+    left: 0px;
+    top: 184px;
+    border-radius: 80px 0px 0px 0px;
+    background: linear-gradient(180deg,  var(--linear-black) 0%, var(--linear-white) 100%);
+    transform: rotate(-180deg);
+}
+
+.navbar{
+    height: 120px;
+    top: 0px;
+}
+
+#first-page {
+    margin: 0;
+    background: url(./images/ringi-aripark1.jpg);
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 90px 0px;
+    width: calc(100% - 16px);
+    height: 668px;
+    position: absolute;
+    border: 16px solid var(--white);
+}
+
+.logo img {
+    margin:20px 20px;
+}
+
+.lang {
+    position: absolute;
+    top: calc(50% - 18px/2 - 32px);
+    right: 17px;
+    font-size: 12px;
+}
+
+.lang a {
+    color: white;
+    text-decoration: none;
+}
+
+.lang .est {
+    font-weight: 700;
+}
+
+.lang a:hover{
+    text-decoration:  underline;
+    color: var(--hover-red);
+}
+
+.welcome-page-text {
+    position:relative;
+    margin: 180px 150px 150px 150px;
+}
+
+.welcome-page-text h1 {
+    color: var(--white);
+    text-align: center;
+    font-size: 40px;
+}
+
+#first-page-button .red-button {
+    position: absolute;
+    width: 304px;
+    height: 40px;
+    top: 527px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 70px;
+    background: var(--button-red);
+    border: hidden;
+    color: var(--white);
+}
+
+ #first-page-button .red-button:hover {
+    background: var(--hover-red)
+}
+
+.cookie{
+	width: 291px;
+    height: 52px;
+    background-color: var(--white);
+    position: absolute;
+    top: 574px;
+	left: 14px;
+	padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 34px 80px var(--box-shadow);
+}
+
+.cookie .txt{
+	float: left;
+    width: 70%;
+    font-size: 11px;
+}
+
+.txt p{
+	color:var(--black);
+}
+
+.txt a{
+    color: var(--black);
+}
+
+.cookie .accept {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 3px 15px;
+    border: 2px solid var(--black);
+    border-radius: unset;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.cookie .accept:hover {
+	background-color: var(--grey);
+}
+
+.scroll-down a{
+    width: 12px;
+    height: 7.4px;
+    position: absolute;
+    right: 10px;
+    top: 615px;
+    color:var(--black);
+}
+
+/* DETAIL PAGE */
+
+#detail-page{
+    position: absolute;
+    width: 98vw;
+    height: 700px;
+    top: 670px;
+    background: url(./images/ringi-aripark3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden-img{
+    visibility: hidden;
+}
+
+#detail-info {
+    position: absolute;
+    width: 552px;
+    height: 700px;
+    right: 0px;
+    top:0px;
+    background: var(--transparent-white);
+    animation: detailinfo 1s 1 linear;
+}
+
+@keyframes detailinfo {
+    0%   {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+#detail-heading {
+    position: absolute;
+    top: 81px;
+    left: 64px;
+    right: 64px;
+    width: 424px;
+    height: 100px;
+    padding: 15px 0px 40px 0px;
+    color: var(--black);
+    font-size: 32px;
+    font-weight: 700;
+    border-top: 4px solid var(--black);
+}
+
+table {
+    position: absolute;
+    width: 424px;
+    height: 381px;
+    left: 64px;
+    top: 181px;
+    border-top: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 0px;
+    border-collapse: collapse;
+}
+
+td.col-smaller{
+    width: 40%;
+    word-wrap: break-word;
+}
+
+td.col-bigger{
+    width: 300px;
+    height: 24px;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+table tr{
+    border-bottom: 1px solid var(--black);
+}
+
+.red-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    position: absolute;
+    width: 169px;
+    height: 40px;
+    left: 64px;
+    top: 578px;
+    background: var(--button-red);
+    color: var(--white);
+    font-weight: 700;
+    border: hidden;
+}
+
+.red-button:hover {
+    background: var(--hover-red);
+}
+
+i{
+    padding-right: 10px;
+}
+
+/* CONATCT PAGE */
+
+#contact-page {
+    position: absolute;
+    width: 98vw;
+    height: 866px;
+    top: 1386px;
+    border-bottom: 16px solid var(--white);
+    background: url(./images/ringi-aripark1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sideinfo-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+    position: absolute;
+    width: 552px;
+    height: 850px;
+    right: 0px;
+    top: 0px;
+    background: var(--transparent-black);
+    animation: contactform 1s 1 linear ;
+}
+
+@keyframes contactform {
+    0%   {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+
+.bottom-logo img {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+#contact-heading {
+    position: absolute;
+    top: 81px;
+    left: 64px;
+    right: 64px;
+    width: 424px;
+    height: 100px;
+    padding: 15px 0px 40px 0px;
+    color: var(--white);
+    font-size: 32px;
+    border-top: 4px solid var(--white);
+}
+
+.contact-text{
+    position: absolute;
+    height: 72px;
+    left: 64px;
+    right: 64px;
+    top: 180px;
+    width: 424px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+br.br-hidden {
+    display: none;
+}
+
+.contact-form{
+    position: absolute;
+    height: 288px;
+    left: 64px;
+    right: 64px;
+    top: 255px;
+    width: 424px;
+    margin: 30px 0px;
+}
+
+input.input-box, textarea{
+    background: var(--black);
+    width: 424px;
+    border: 1px solid var(--white);
+    padding: 11px 8px 13px 8px;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+input.input-box{
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+textarea{
+    resize: vertical;
+    outline: none;
+    max-height: 200px;
+}
+
+::placeholder { 
+    color: var(--white);
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder { 
+    color: var(--white);
+  }
+  
+  ::-ms-input-placeholder { 
+    color: var(--white);
+  }
+
+.private-text{
+    position: absolute;
+    height: 54px;
+    left: 64px;
+    right: 64px;
+    top: 592px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--white);
+}
+
+.private-text a {
+    color: var(--white);
+}
+
+.not-robot img{
+    position: absolute;
+    width: 319px;
+    height: 92px;
+    left: 64px;
+    right: 169px;
+    top: 651px;
+    margin: 10px 0px;
+}
+
+.contact-page-btn .red-button{
+    padding: 8px 24px;
+    position: absolute;
+    width: 424px;
+    height: 40px;
+    left: 64px;
+    top: 746px;
+    background: var(--button-red);
+    color: var(--white);
+    font-weight: 700;
+    margin-top: 20px;
+    border: hidden;
+}
+
+.contact-page-btn .red-button:hover {
+    background: var(--hover-red);
+}
+
+@media screen and (max-width:770px) {
+    /* FIRST PAGE */
+
+.bottom-dark {
+    height: 470px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+#first-page {
+    background-position-x: 50%;
+    border-radius: 0px 0px 0px 0px;
+    width: calc(100% - 8px);
+    height: 670px;
+    border: 8px solid var(--white);
+}
+
+.logo img{
+    width: 80%;
+    max-width: 770px;
+    top: 0px;
+    height: 30px;
+}
+
+.welcome-page-text {
+   position:relative;
+margin: 130px 100px 100px 75px; 
+}
+
+.welcome-page-text h1 {
+    font-size: 34px;
+}
+
+#first-page-button .red-button {
+    width: 100%;
+    left: 0px;
+    top: 614px;
+    transform: none;
+}
+
+.cookie{
+	display: none;
+}
+
+.scroll-down a{
+    display: none;
+}
+
+/* DETAIL PAGE */
+
+#detail-page{
+    background: none;
+}
+
+.hidden-img img{
+    visibility: visible;
+    width: 100%;
+    max-width: 770px;
+    object-fit: cover;
+    height: 276px;
+}
+
+#detail-info {
+    width: 100%;
+    max-width: 770px;
+    height: 1000px;
+    right: 0px;
+    background: var(--white);
+    animation: none;
+    margin-top: 300px;
+}
+
+#detail-heading {
+    top: 41px;
+    left: 32px;
+    right: 32px;
+    width: 90%;
+    font-size: 28px;
+}
+
+table {
+    position: absolute;
+    width: 90%;
+    height: 481px;
+    left: 32px;
+    right: 32px;
+    top: 140px;
+}
+
+.red-button{
+    width: 90%;
+    right: 32px;
+    left: 32px;
+    top: 650px;
+}
+
+/* CONATCT PAGE */
+
+#contact-page {
+    border-bottom: 16px solid var(--white);
+    background: transparent;
+    margin-top: 320px;
+}
+
+#sideinfo-contact {
+    width: 100%;
+    max-width: 770px;
+    background-image: linear-gradient(
+    var(--transparent-black), var(--transparent-black)),
+     url(./images/ringi-aripark1.jpg); 
+    animation: none ;
+}
+
+.bottom-logo img {
+    display: none;
+}
+
+#contact-heading {
+    top: 80px;
+    left: 32px;
+    right: 32px;
+    width: 90%;
+    font-size: 28px;
+}
+
+.contact-text{
+    left: 32px;
+    right: 32px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+br.br-hidden {
+    display: block;
+}
+
+.contact-form{
+    left: 32px;
+    right: 32px;
+    top: 280px;
+    width: 90%;
+}
+
+input.input-box, textarea{
+    width: 100%;
+}
+
+.private-text{
+    height: 90px;
+    left: 32px;
+    right: 32px;
+    top: 610px;
+}
+
+.not-robot img{
+    width: 270px;
+    height: 78px;
+    left: 32px;
+    top: 680px;
+}
+
+.contact-page-btn .red-button{
+    width: 90%;
+    left: 32px;
+    top: 766px;
+}
+}
